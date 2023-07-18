@@ -35,4 +35,22 @@ Responsável por modificar elementos DOM da página
 
 3 - Para testar se o angular está instalado é só conferir a versão com 
 
+- ng version
+
+4 - Criar um projeto 
+
+- ng new
+
+5 - Abrir o localhost
+
 - ng serve
+
+### 
+
+Toda vez que um módulo é criado é necessário declará-lo no app.module.ts
+
+além de exportar ele na própria classe
+
+### Criar um Componente
+
+- ng g c
