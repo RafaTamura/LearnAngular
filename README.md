@@ -53,4 +53,38 @@ além de exportar ele na própria classe
 
 ### Criar um Componente
 
+O componente é onde fica a lógica do projeto
+
 - ng g c
+
+## Módulos
+
+Existe o módulo raiz do projeto, e os criados que são para criar as funcionalidades.
+
+Nele só importa o CommonModule e para exportar utiliza o: 
+
+```jsx
+exports:[
+componente a ser exportado
+]
+```
+
+Criar um módulo
+
+- ng g m
+
+Para adicionar os módulos e componentes criados no app component é necessário add o seletor no app component (tag html)
+
+## Services
+
+O serviço é responsável por fazer a conexão com o back-end.
+
+O HttpModule realiza a busca de dados de uma fonte externa
+
+Criar um serviço
+
+- ng g s
+
+O decorator injectable indica que essa classe pode ser injetada em outra classe
+
+providers são os serviços fornecedores
