@@ -88,3 +88,84 @@ Criar um serviço
 O decorator injectable indica que essa classe pode ser injetada em outra classe
 
 providers são os serviços fornecedores
+
+## Data Binding
+
+### Interpolação
+
+ Tem a saída de uma variável, pode também realizar expressões dentro da interpolação e colocar expressões lógicas também
+
+{{ 1 + 1 + getValor() }}
+
+{{ valor }}
+
+### Property Binding
+
+O foco é maior na propriedade, exemplo de uso
+
+[propriedade] = “valor”
+
+```jsx
+<img [src] = "urlImagem">
+```
+
+(evento)=”handler”
+
+[(ngModel)] = “propriedade” → Útil para formulários
+
+### Class e Style Binding
+
+<aside>
+💡  Trabalhando com comboBox utilizando property binding e class binding
+
+</aside>
+
+```jsx
+<h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br><br>
+
+      <div class="alert {{ classe.value }}" role="alert">
+        Texto colorido conforme valor do combobox.
+      </div>
+
+      <div class="alert" role="alert"
+        [class.alert-success]="classe.value == 'alert-success'">
+        Sucesso
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-info]="classe.value == 'alert-info'">
+        Info
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-warning]="classe.value == 'alert-warning'">
+        Alerta
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-danger]="classe.value == 'alert-danger'"
+      >
+        Erro
+      </div>
+
+      <div class="alert alert-danger" role="alert"
+        [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+        Esse texto somente aparece em caso de erro.
+      </div>
+
+    </div>
+  </article>
+
+</section>
+```
+
+Para criar uma variavel local é só colocar o “#” antes do nome da variavel e o evento logo em seguida
